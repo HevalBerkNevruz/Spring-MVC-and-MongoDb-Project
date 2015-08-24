@@ -15,7 +15,11 @@ import java.util.List;
 public class UserServiceImpl implements IUserService {
 
     @Autowired
-    IUserRepository repository;
+    private IUserRepository repository;
+
+    public void setRepository(IUserRepository repository) {
+        this.repository = repository;
+    }
 
     @Override
     public void addUser(User user) {
